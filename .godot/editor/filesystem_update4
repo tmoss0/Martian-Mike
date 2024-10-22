@@ -1,9 +1,6 @@
-res://scenes/player.tscn
-res://scripts/player.gd
+res://scenes/spikeball.tscn
 res://scenes/level.tscn
-res://scripts/level.gd
+res://scenes/player.tscn
 res://scenes/jump_pad.tscn
-res://scripts/jump_pad.gd
 res://scenes/saw.tscn
 res://scripts/trap.gd
-res://scenes/spikeball.tscn
