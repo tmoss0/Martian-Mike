@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1729470598
+::res://::1729555416
 icon.svg::CompressedTexture2D::4447430044568340622::1729390866::1729390872::1::::<><>::
 ::res://assets/::1729391020
 ::res://assets/audio/::1729391027
@@ -30,7 +30,9 @@ Fall (32x32).png::CompressedTexture2D::6945058810351446765::1729390918::17293910
 Idle (32x32).png::CompressedTexture2D::5533205745420821175::1729390918::1729391027::1::::<><>::
 Jump (32x32).png::CompressedTexture2D::6206908258909165058::1729390918::1729391027::1::::<><>::
 Run (32x32).png::CompressedTexture2D::2310199286840815044::1729390918::1729391027::1::::<><>::
-::res://scenes/::1729392143
-level.tscn::PackedScene::8209031519149431625::1729392143::0::1::::<><>::res://scripts/level.gd
-::res://scripts/::1729392125
-level.gd::GDScript::-1::1729392125::0::1::::<>Node2D<>::
+::res://scenes/::1729476891
+level.tscn::PackedScene::8209031519149431625::1729476836::0::1::::<><>::res://scripts/level.gd<>uid://b4mmr1whcmh5w::::res://icon.svg<>uid://cvutj1ix57tc1::::res://scenes/player.tscn
+player.tscn::PackedScene::6289265712925708266::1729476891::0::1::::<><>::uid://ck3ldcj3mh3h8::::res://assets/textures/player/Idle (32x32).png<>res://scripts/player.gd<>uid://c57idseq77frx::::res://assets/textures/player/Fall (32x32).png<>uid://76cv6kp2wmka::::res://assets/textures/player/Run (32x32).png<>uid://cuow4wiklevio::::res://assets/textures/player/Jump (32x32).png
+::res://scripts/::1729476835
+level.gd::GDScript::-1::1729474510::0::1::::<>Node2D<>::
+player.gd::GDScript::-1::1729476835::0::1::::<>CharacterBody2D<>::

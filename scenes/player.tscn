@@ -206,6 +206,7 @@ script = ExtResource("1_i1y7y")
 sprite_frames = SubResource("SpriteFrames_31ugx")
 animation = &"idle"
 autoplay = "idle"
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3)
