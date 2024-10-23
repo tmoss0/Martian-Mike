@@ -3,6 +3,9 @@ extends Node2D
 @onready var start_position = $StartPosition
 @onready var player = $Player
 
+func _ready() -> void:
+	var traps = get_tree().get_nodes_in_group("traps")
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("quit"):
