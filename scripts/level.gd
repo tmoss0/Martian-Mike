@@ -9,13 +9,13 @@ func _ready() -> void:
 		trap.touched_player.connect(_on_trap_touched_player)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("quit"):
 		get_tree().quit()
 	elif Input.is_action_just_pressed("reset"):
 		get_tree().reload_current_scene()
 
-func _on_deathzone_body_entered(body: Node2D) -> void:
+func _on_deathzone_body_entered(_body: Node2D) -> void:
 	reset_player()
 
 func _on_trap_touched_player() -> void:

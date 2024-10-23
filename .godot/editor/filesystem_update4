@@ -4,3 +4,5 @@ res://scenes/player.tscn
 res://scenes/jump_pad.tscn
 res://scenes/saw.tscn
 res://scenes/spikeball.tscn
+res://scenes/tile_map.tscn
+res://scenes/spike_ball.tscn
