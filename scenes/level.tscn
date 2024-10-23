@@ -58,9 +58,10 @@ jump_force = 350
 [node name="Saw" parent="Traps" instance=ExtResource("5_8un12")]
 position = Vector2(425, 134)
 
+[node name="Saw2" parent="Traps" instance=ExtResource("5_8un12")]
+position = Vector2(424, 85)
+
 [node name="SpikeBall" parent="Traps" instance=ExtResource("6_pa147")]
 position = Vector2(-65, 137)
 
 [connection signal="body_entered" from="Deathzone" to="." method="_on_deathzone_body_entered"]
-[connection signal="touched_player" from="Traps/Saw" to="." method="_on_trap_touched_player"]
-[connection signal="touched_player" from="Traps/SpikeBall" to="." method="_on_trap_touched_player"]
