@@ -1,8 +1,5 @@
+res://scenes/exit.tscn
+res://scenes/exit.gd
 res://scenes/level.tscn
-res://scenes/tile_map.tscn
-res://scenes/bg.tscn
-res://scripts/bg.gd
 res://scenes/start.tscn
-res://scripts/start.gd
-res://scripts/level.gd
 res://scenes/player.tscn

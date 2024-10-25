@@ -1,7 +1,8 @@
-Marker2D
 CollisionShape2D
-AnimatedSprite2D
 StaticBody2D
+AnimatedSprite2D
+Area2D
+Marker2D
 Sprite2D
 ParallaxLayer
 ParallaxBackground
@@ -10,5 +11,4 @@ TileMapLayer
 AnimationPlayer
 AnimationTree
 Node2D
-Area2D
 Camera2D

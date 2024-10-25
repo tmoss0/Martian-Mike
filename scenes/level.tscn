@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://do7rsxr86xoh2"]
+[gd_scene load_steps=13 format=3 uid="uid://do7rsxr86xoh2"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_ledal"]
 [ext_resource type="Texture2D" uid="uid://b4mmr1whcmh5w" path="res://icon.svg" id="2_gfhgs"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cvt2q8myxs0lr" path="res://scenes/spike_ball.tscn" id="6_pa147"]
 [ext_resource type="PackedScene" uid="uid://clnjdgy56v280" path="res://scenes/tile_map.tscn" id="7_g7a7c"]
 [ext_resource type="PackedScene" uid="uid://dnuluorl0koii" path="res://scenes/start.tscn" id="9_w28ic"]
+[ext_resource type="PackedScene" uid="uid://bojju4rx05mto" path="res://scenes/exit.tscn" id="10_m8qs4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5q4mx"]
 size = Vector2(130.642, 47)
@@ -34,9 +35,6 @@ texture = ExtResource("2_gfhgs")
 position = Vector2(236, 153.5)
 scale = Vector2(7.333, 1)
 shape = SubResource("RectangleShape2D_5q4mx")
-
-[node name="Player" parent="." instance=ExtResource("3_vn1se")]
-position = Vector2(227, 59)
 
 [node name="Deathzone" type="Area2D" parent="."]
 collision_layer = 4
@@ -72,5 +70,11 @@ layer_0/tile_data = PackedInt32Array(2949092, 393216, 0, 3014628, 393216, 1, 308
 
 [node name="Start" parent="." instance=ExtResource("9_w28ic")]
 position = Vector2(242, 136)
+
+[node name="Exit" parent="." instance=ExtResource("10_m8qs4")]
+position = Vector2(500, 35)
+
+[node name="Player" parent="." instance=ExtResource("3_vn1se")]
+position = Vector2(227, 59)
 
 [connection signal="body_entered" from="Deathzone" to="." method="_on_deathzone_body_entered"]
