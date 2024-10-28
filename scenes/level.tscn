@@ -1,10 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://do7rsxr86xoh2"]
+[gd_scene load_steps=12 format=3 uid="uid://do7rsxr86xoh2"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_ledal"]
-[ext_resource type="Texture2D" uid="uid://b4mmr1whcmh5w" path="res://icon.svg" id="2_gfhgs"]
 [ext_resource type="PackedScene" uid="uid://cjf6lfnn4p7qk" path="res://scenes/level_2.tscn" id="2_o4iac"]
 [ext_resource type="PackedScene" uid="uid://d1dllk3nfuwsn" path="res://scenes/bg.tscn" id="2_s767q"]
 [ext_resource type="PackedScene" uid="uid://cvutj1ix57tc1" path="res://scenes/player.tscn" id="3_vn1se"]
+[ext_resource type="PackedScene" uid="uid://caylnkoql0g67" path="res://scenes/deathzone.tscn" id="4_481qf"]
 [ext_resource type="PackedScene" uid="uid://dc5hh76qbjxap" path="res://scenes/jump_pad.tscn" id="4_ir7my"]
 [ext_resource type="PackedScene" uid="uid://nhikxs5ojfd0" path="res://scenes/saw.tscn" id="5_8un12"]
 [ext_resource type="PackedScene" uid="uid://cvt2q8myxs0lr" path="res://scenes/spike_ball.tscn" id="6_pa147"]
@@ -12,39 +12,13 @@
 [ext_resource type="PackedScene" uid="uid://c2jlt4a05epi5" path="res://scenes/exit.tscn" id="9_4ixto"]
 [ext_resource type="PackedScene" uid="uid://dnuluorl0koii" path="res://scenes/start.tscn" id="9_w28ic"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5q4mx"]
-size = Vector2(130.642, 47)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0v8y8"]
-size = Vector2(1458, 4.5)
-
 [node name="Level" type="Node2D"]
 script = ExtResource("1_ledal")
 next_level = ExtResource("2_o4iac")
 
 [node name="BG" parent="." instance=ExtResource("2_s767q")]
 
-[node name="Ground" type="StaticBody2D" parent="."]
-position = Vector2(64, -535)
-
-[node name="Sprite2D" type="Sprite2D" parent="Ground"]
-modulate = Color(0, 0, 0, 1)
-position = Vector2(237, 154.5)
-scale = Vector2(7.333, 0.367)
-texture = ExtResource("2_gfhgs")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
-position = Vector2(236, 153.5)
-scale = Vector2(7.333, 1)
-shape = SubResource("RectangleShape2D_5q4mx")
-
-[node name="Deathzone" type="Area2D" parent="."]
-collision_layer = 4
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Deathzone"]
-position = Vector2(267, 249.75)
-shape = SubResource("RectangleShape2D_0v8y8")
+[node name="Deathzone" parent="." instance=ExtResource("4_481qf")]
 
 [node name="Objects" type="Node2D" parent="."]
 
@@ -78,5 +52,3 @@ position = Vector2(194, 19)
 
 [node name="Player" parent="." instance=ExtResource("3_vn1se")]
 position = Vector2(227, 59)
-
-[connection signal="body_entered" from="Deathzone" to="." method="_on_deathzone_body_entered"]
