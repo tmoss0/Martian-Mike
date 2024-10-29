@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cwx3u5qc8tt16"]
+[gd_scene load_steps=10 format=3 uid="uid://cwx3u5qc8tt16"]
 
 [ext_resource type="PackedScene" uid="uid://d1dllk3nfuwsn" path="res://scenes/bg.tscn" id="1_1fw4i"]
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_y0lup"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://clnjdgy56v280" path="res://scenes/tile_map.tscn" id="4_tjh2o"]
 [ext_resource type="PackedScene" uid="uid://caylnkoql0g67" path="res://scenes/deathzone.tscn" id="5_jact6"]
 [ext_resource type="PackedScene" uid="uid://cvutj1ix57tc1" path="res://scenes/player.tscn" id="6_kn1i3"]
+[ext_resource type="PackedScene" uid="uid://cjk4dd5ui11ey" path="res://scenes/ui_layer.tscn" id="9_tvqnr"]
 
 [node name="Level_3" type="Node2D"]
 script = ExtResource("1_y0lup")
@@ -32,3 +33,5 @@ position = Vector2(102, 77)
 [node name="Objects" type="Node2D" parent="."]
 
 [node name="Traps" type="Node2D" parent="."]
+
+[node name="UILayer" parent="." instance=ExtResource("9_tvqnr")]

@@ -1,3 +1,6 @@
+Label
+Control
+CanvasLayer
 Node2D
 Node
 CollisionShape2D
@@ -10,5 +13,3 @@ ParallaxLayer
 ParallaxBackground
 TileMap
 TileMapLayer
-AnimationPlayer
-AnimationTree

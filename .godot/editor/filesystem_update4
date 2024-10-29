@@ -1,4 +1,7 @@
 res://scenes/level.tscn
-res://scenes/level_2.tscn
+res://scenes/ui_layer.tscn
+res://scenes/hud.tscn
+res://scripts/hud.gd
 res://scripts/level.gd
+res://scenes/level_2.tscn
 res://scenes/level_3.tscn
