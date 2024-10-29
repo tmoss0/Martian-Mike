@@ -5,3 +5,6 @@ res://scripts/hud.gd
 res://scripts/level.gd
 res://scenes/level_2.tscn
 res://scenes/level_3.tscn
+res://scenes/win_screen.tscn
+res://scripts/win_screen.gd
+res://scripts/ui_layer.gd

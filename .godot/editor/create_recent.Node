@@ -1,4 +1,6 @@
+Button
 Label
+ColorRect
 Control
 CanvasLayer
 Node2D
@@ -11,5 +13,3 @@ Marker2D
 Sprite2D
 ParallaxLayer
 ParallaxBackground
-TileMap
-TileMapLayer

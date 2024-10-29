@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var next_level: PackedScene = null
+@export var is_final_level: bool = false
 
 @onready var start = $Start
 @onready var exit = $Exit
@@ -8,6 +9,7 @@ extends Node2D
 var player = null
 
 @onready var hud = $UILayer/HUD
+@onready var ui_layer = $UILayer
 
 @export var level_time = 5
 var timer_node = null
@@ -51,12 +53,15 @@ func _on_trap_touched_player() -> void:
 	
 func _on_exit_body_entered(body) -> void:
 	if body is Player:
-		if next_level != null:
+		if is_final_level || (next_level != null):
 			exit.animate()
 			player.active = false	
 			win = true
 			await get_tree().create_timer(1.5).timeout # waits 1.5 seconds then loads next level
-			get_tree().change_scene_to_packed(next_level)
+			if is_final_level:
+				ui_layer.show_win_screen(true)
+			else: 
+				get_tree().change_scene_to_packed(next_level)
 
 func _on_level_timer_timeout():
 	if win == false:
