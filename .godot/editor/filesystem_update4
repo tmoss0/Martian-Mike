@@ -8,3 +8,5 @@ res://scenes/level_3.tscn
 res://scenes/win_screen.tscn
 res://scripts/win_screen.gd
 res://scripts/ui_layer.gd
+res://scripts/start_menu.gd
+res://scenes/start_menu.tscn
