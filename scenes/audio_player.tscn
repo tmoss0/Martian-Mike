@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3i84h8cy3pcg"]
+
+[ext_resource type="Script" path="res://scripts/audio_player.gd" id="1_3jdnd"]
+[ext_resource type="AudioStream" uid="uid://ddrkfe2tuugtm" path="res://assets/audio/Music/Music.WAV" id="1_exkxm"]
+
+[node name="AudioPlayer" type="Node"]
+script = ExtResource("1_3jdnd")
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_exkxm")
+autoplay = true
